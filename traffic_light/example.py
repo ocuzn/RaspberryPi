@@ -1,10 +1,7 @@
+#See https://newbiely.com/tutorials/raspberry-pi/raspberry-pi-traffic-light
+
 import RPi.GPIO as GPIO
 import time
-
-"""
-See https://newbiely.com/tutorials/raspberry-pi/raspberry-pi-traffic-light
-"""
-
 
 # Define GPIO pins
 PIN_RED = 7     # The Raspberry Pi GPIO pin connected to the R pin of the traffic light module
