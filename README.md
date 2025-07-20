@@ -1,7 +1,6 @@
 # RaspberryPi
 
-A collection of libraries for different raspberry pi modules:
-
+A collection of example tests for different raspberry pi modules:
 
 Raspberry pi 4B
 
@@ -28,7 +27,17 @@ Raspberry pi 4B
 | 37  | 26  | GPIO26  | GPIO20  | 20  | 38  |
 | 39  |     | GND     | GPIO21  | 21  | 40  |
 
+---
 
-MP180: Barometric sensor module, measures pressure altitude and temperature
+**MP180**: Barometric sensor module, measures pressure altitude and temperature
 
-DHT11: Measures temperature and humidity
+**DHT11**: Measures temperature and humidity
+
+**OV5647**: Camera module.
+Easy way to test steam over VLC -> 
+
+```
+libcamera-vid -t 0 --width 640 --height 480 --framerate 25 --inline --listen -o - | cvlc -vvv stream:///dev/stdin --sout '#standard{access=http,mux=ts,dst=:8080}' :demux=h264
+```
+
+ Open VLC → Media → Open Network Stream → enter: `http://<raspberry_pi_ip>:8080`
