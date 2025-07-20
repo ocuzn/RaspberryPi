@@ -3,15 +3,13 @@
 import time
 import adafruit_dht
 import board
-from utils.temperature import get_temp_farenheight
 dht_device = adafruit_dht.DHT11(board.D22)
 
 while True:
     try:
         temperature_c = dht_device.temperature
-        temperature_f = get_temp_farenheight(temperature_c)
         humidity = dht_device.humidity
-        print("Temp:{:.1f} C / {:.1f} F    Humidity: {}%".format(temperature_c, temperature_f, humidity))
+        print("Temp:{:.1f} C  Humidity: {}%".format(temperature_c, humidity))
     except RuntimeError as err:
         print(err.args[0])
     time.sleep(2.0)

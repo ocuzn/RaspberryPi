@@ -1,4 +1,4 @@
 adafruit-circuitpython-dht
 adafruit-circuitpython-busdevice
-adafruit_dht
+Adafruit_DHT --install-option="--force-pi"
 RPi.GPIO
